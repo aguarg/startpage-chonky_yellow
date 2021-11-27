@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Starting page, página de inicio">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Starting page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <link rel="stylesheet" href="startEstilos.css">
+    
+
+</head>
+
+
+<body>
+	<!--Sección con los datos del clima-->
+	<div class="contenedor_clima">
+		<h2>CLIMA PARA HOY</h2>
+		<a class="weatherwidget-io" href="https://forecast7.com/es/n31d74n60d51/parana/" data-label_1="Paraná - Entre Ríos" data-font="Ubuntu" data-icons="Climacons Animated" data-days="3" data-theme="dark" data-basecolor="#262626" data-textcolor="#fffb7a" data-suncolor="#ffbe64" data-raincolor="#a6dbff" >Paraná - Entre Ríos</a>
+		<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+		</script>
+
+	</div>
+
+	<!--Sección con las barras de los motores de búsqueda------------------------>
+	<div class="contenedor_motores_busqueda">
+		<h2>MOTORES DE BÚSQUEDA</h2>
+			<div class="contenedor_de_inputs">
+				<div class="motor">
+					<!--Caja para buscar en Google-->
+					
+					<form action="https://google.com/search" target="_blank" type="GET">
+
+					  <input type="search" name="q" class="caja_buscador" placeholder="Google">
+					
+					</form>
+				</div>
+
+				
+				<!--Caja para buscar en DuckDuckGo-->
+				<div class="motor">
+					
+					<form action="https://duckduckgo.com/?q=" target="_blank" type="GET">
+
+					  <input type="search" name="q" class="caja_buscador" placeholder="DuckDuckGo!">
+					  
+					</form>
+				</div>	
+
+				<!--Caja para buscar en Bing-->
+				<div class="motor">
+					
+					<form action="https://bing.com/?q=" target="_blank" type="GET">
+
+					  <input type="search" name="q" class="caja_buscador" placeholder="Bing">
+					  
+					</form>
+				</div>	
+
+
+				
+			</div>	
+	</div>
+
+	
+
+
+	<!--Sección con la hora y la fecha-------------------------------------------->
+	
+	<div class="contenedor_hora_y_fecha">
+		
+		<h2>FECHA Y HORA</h2>
+		<h1 id="reloj" class="contenedor_hora"></h1>
+		
+		
+			<h4 id="fecha" class="contenedor_fecha"></h4>
+		</div>
+	</div>
+
+	
+
+	<!--Sección con la lista de tareas------------------------------------------------------->
+	<div class="contenedor_lista_tareas">
+		<div id="myDIV" class="header">
+		  <h2>NOTAS/TAREAS:</h2>
+		  <input type="text" id="myInput" class="caja_tareas" placeholder="ingresar nota o tarea">
+		  <span onclick="newElement()" class="addBtn">agregar</span>
+		</div>
+
+		<ul id="myUL">
+		  
+		</ul>
+	</div>	
+
+
+	<!--Sección con las cajas de las categorías que contienen los links-->
+	<div class="contenedor_categorias">
+		<h2>SITIOS</h2>
+		
+		<div class="categorias">
+			<div class="categoria">
+				
+				<!--Todo lo realcionado a la facultad-->
+				<h3>Estudio</h3>
+				
+
+				<a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+
+				<a href="https://drive.google.com/drive/" target="_blank">Google Drive</a>
+
+				<a href="https://keep.google.com/u/0/" target="_blank">Google Keep</a>
+
+			</div>
+
+			<!--Todo lo realcionado a comunicación y redes sociales-->
+			<div class="categoria">
+				<h3>Social</h3>
+				<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+				<a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a>
+
+				<a href="https://www.instagram.com" target="_blank">Instagram</a>
+
+			</div>
+
+			<!--Todo lo relacionado con la programación-->
+			<div class="categoria">
+				<h3>Programación</h3>
+				<a href="https://github.com/login" target="_blank">GitHub</a>
+
+				
+			</div>
+
+			<!--Todo lo relacionado con la diversión y el ocio-->
+			<div class="categoria">
+				<h3>Ocio</h3>
+				<a href="https://youtube.com/" target="_blank">YouTube</a>
+
+				<a href="https://www.old.reddit.com/r/argentina/new/" target="_blank">Reddit</a>
+			</div>
+
+			
+		</div>	
+	</div>
+
+
+<script type="text/javascript" src="startJS.js"></script>
+</body>
+
+
+</html>

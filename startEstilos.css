@@ -1,0 +1,327 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+body {
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #262626;
+  
+  display: grid;
+
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+  "clima clima clima motores motores motores motores hora hora hora"
+  "categorias categorias categorias categorias categorias categorias categorias lista lista lista"
+
+}
+
+
+h2, h3, h4, ul, li, .addBtn {
+  font-family: 'Ubuntu', sans-serif;
+  padding-left: 1px;
+  background-color: #f7e32d;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 5px;
+  text-align: center;
+  color: #f7e32d;
+  background-color: #f7e32d;
+  font-size: 10vw;
+  display: block;
+
+}
+
+a {
+  color: #f7e32d;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  margin: 0px 0px 3px 0px;
+
+}
+
+a:hover {
+  color:#262626; 
+  background-color:#f7e32d;
+  font-weight: bold;
+
+}
+
+/*Reglas comunes a todos las secciones*/
+.contenedor_clima, .contenedor_motores_busqueda, .contenedor_hora_y_fecha, 
+.contenedor_categorias, .contenedor_lista_tareas {
+  
+  padding: 5px 5px 5px 5px;
+  margin: 3px;
+
+  background-color: #f7e32d;
+
+} 
+
+/*Secciones========================================================================*/
+/*Contenedor del widget del clima*/
+.contenedor_clima {
+	grid-area: clima;
+  padding: 5px;
+  
+}
+
+/*Widget del clima, de https://weatherwidget.io/*/
+.weatherwidget-io {
+  
+}
+
+/*-------------------------------------------------------------------------------------*/
+/*Estilos de la sección entera de los dos motores de búsqueda*/
+.contenedor_motores_busqueda {
+	grid-area: motores;
+  padding: 5px 5px 0px 5px;
+
+}
+
+/*DIV Contenedor de las dos cajas de texto de los buscadores*/
+.contenedor_de_inputs {
+  padding: 0px 5px 0px 5px;
+  background-color: #262626;
+  min-height: 205px;
+  
+  /*Para espacear los motores de búsqueda*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+
+.motor {
+    /*clase sin uso. La mantengo por las dudas*/
+}
+
+
+/*Caja de texto de los buscadores*/
+.caja_buscador, .caja_tareas {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+   
+  color: #f7e32d;
+  background-color: #262626;
+  outline: none;
+
+  font-size: 16px;
+  font-style: italic;
+  
+  border-style: none none solid none;
+  border-color: #f7e32d;
+  border-width: 2px;
+
+  }
+
+
+/*---------------------------------------------------------------------------------------*/
+/*Contenedor con la hora y la fecha*/
+.contenedor_hora_y_fecha {
+	grid-area: hora;
+  padding: 5px;
+
+}
+
+/*el contenedor con el reloj*/
+.contenedor_hora {
+  background-color: #262626;
+  color: white;
+    
+}
+
+/*el contenedor con la fecha, el mes y el año*/
+.contenedor_fecha {
+  width: 100%;
+  color: white;
+  background-color: #262626;
+  padding: 10px;
+  text-align: center;
+
+}
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*Contenedor con las categorías*/
+.contenedor_categorias {
+	grid-area: categorias;
+  padding: 5px;
+  }
+
+.categorias {
+  
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*Estilos para la lista de tareas*/
+.contenedor_lista_tareas {
+  grid-area: lista;
+  max-height: 242px;
+  overflow: auto;
+  
+}
+
+
+.caja_tareas {
+  width: 70%;
+  height: 30px;
+  }
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 12px 12px 8px;
+  background: #eee;
+  font-size: 15px;
+  transition: 0.2s;
+  margin-top: 3px;
+
+  list-style-type: none; /*remover los puntitos negros*/
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 15px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 2px;
+  width: 25%;
+  height: 27px;
+  margin: 0px;
+
+  background: #262626;
+  color: #f7e32d;
+  float: right;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+  
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+
+
+
+/*Sección CATEGORÍAS---------------------------------------------------------------------*/
+
+/*El contenedor de todas las cajas con cada categoría*/
+.contenedor_categorias {
+  grid-area: categorias;
+  padding: 5px;
+  
+}
+
+/*Cada caja de una categoría, que contiene los links correspondientes esa categoría*/
+
+.categorias {
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-color: #262626
+  
+}
+
+.categoria {
+  max-width: 30%;
+  min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #262626;
+  margin: 5px 5px 5px 0px;
+
+}
+
+h3 + a {
+  margin: 5px 0px 5px 0px;
+}
+
+
+
+
+
